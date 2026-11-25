@@ -2,6 +2,18 @@
 
 This guide outlines the steps needed to set up a Kubernetes cluster using kubeadm.
 
+## At a glance
+
+```mermaid
+flowchart LR
+    Prep["Prepare both nodes"] --> Control["Control plane · kubeadm init"]
+    Prep --> Worker["Worker · join command"]
+    Control --> Network["Install network plugin"]
+    Network --> Verify["Verify node status"]
+    Worker --> Verify
+```
+
+
 ## Pre-requisites:
 * Ubuntu OS (Xenial or later)
 * sudo privileges
@@ -124,4 +136,4 @@ Link to the video tutorial:
 Follow our tutorials here: https://www.youtube.com/@amonkincloud/videos \
 Follow my personal blog here: https://dev.to/yeshwanthlm/ \
 Follow us on Instagram: https://www.instagram.com/amonkincloud/ \
-For queries write to us at: amonkincloud@gmail.com 
+For queries write to us at: amonkincloud@gmail.com
